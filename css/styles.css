@@ -123,7 +123,6 @@ li {
   align-items: center;
   justify-content: center;
   color: var(--text-color);
-  height: 16px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -139,12 +138,7 @@ li {
   height: 70px;
 }
 .contacts-icon {
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
-  margin-top: 34px;
-  margin-bottom: 34px;
-  fill: var(--text-color);
 }
 .contacts-icon {
   fill: currentColor;
@@ -304,6 +298,7 @@ li {
   width: 270px;
   text-align: center;
   margin-left: 30px;
+  overflow: hidden;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -320,7 +315,6 @@ li {
   margin-right: 0px;
 }
 .team-link {
-  display: flex;
   margin-right: 10px;
 }
 .icon-link {
@@ -332,8 +326,6 @@ li {
   border-radius: 50%;
 }
 .team-list {
-  width: 270px;
-  height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,10 +348,8 @@ li {
 }
 .clients-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.clients-div {
+.clients-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -370,13 +360,16 @@ li {
 .clients-item {
   margin-right: 30px;
 }
+.clients-item:last-child {
+  margin-right: 0;
+}
 .clients-icon {
   fill: var(--icon-color);
   height: 60px;
   width: 106px;
 }
-.clients-link:hover .clients-div,
-.clients-link:focus .clients-div {
+.clients-link:hover,
+.clients-link:focus {
   border: solid 1px var(--accent-color);
 }
 .clients-link:hover .clients-icon,
@@ -443,6 +436,7 @@ li {
 }
 .list {
   display: flex;
+  align-items: baseline;
 }
 .list-div {
   margin-right: 70px;
@@ -451,8 +445,10 @@ li {
   margin-right: 0;
 }
 .footer-team-link {
-  display: flex;
   margin-right: 10px;
+}
+.footer-team-link:last-child {
+  margin-right: 0;
 }
 .footer-icon-link {
   display: flex;
@@ -468,7 +464,8 @@ li {
   width: 20px;
   fill: var(--primary-title-color);
 }
-.footer-team-link:hover .footer-icon-link {
+.footer-icon-link:hover,
+.footer-icon-link:focus {
   background-color: var(--accent-color);
 }
 /*Portfolio*/
@@ -527,6 +524,14 @@ li {
   margin-top: 30px;
   flex-basis: calc(100% / 3 - 30px);
 }
+.portfolio-link {
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-text {
   font-size: 16px;
   line-height: 1.87;
@@ -539,8 +544,4 @@ li {
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
-}
-.portfolio-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
