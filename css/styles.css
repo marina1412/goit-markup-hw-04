@@ -134,10 +134,6 @@ li {
 .contacts-link:focus {
   color: var(--accent-color);
 }
-.contacts-link:hover .contacts-icon,
-.contacts-link:focus .contacts-icon {
-  fill: var(--accent-color);
-}
 .icon {
   width: 70px;
   height: 70px;
@@ -150,8 +146,8 @@ li {
   margin-bottom: 34px;
   fill: var(--text-color);
 }
-.contacts-icon:hover .contacts-icon:focus {
-  fill: var(--accent-color);
+.contacts-icon {
+  fill: currentColor;
 }
 .sitenav .contacts {
   font-weight: 500;
@@ -364,6 +360,9 @@ li {
   justify-content: center;
 }
 .clients-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 92px;
   width: 170px;
   border: solid 1px var(--icon-color);
@@ -373,19 +372,15 @@ li {
 }
 .clients-icon {
   fill: var(--icon-color);
-}
-.clients-icon-div {
   height: 60px;
   width: 106px;
-  margin: 16px 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.clients-link:hover .clients-div {
+.clients-link:hover .clients-div,
+.clients-link:focus .clients-div {
   border: solid 1px var(--accent-color);
 }
-.clients-link:hover .clients-icon {
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
   fill: var(--accent-color);
 }
 /*footer*/
